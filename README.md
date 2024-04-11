@@ -31,8 +31,26 @@ Before running this API, ensure you have the following installed:
     
 3.  Set up MySQL database:
     
-    -   Create a MySQL database named `blogpost`.
+    -   Install MySQL server if not already installed.
+        
+    -   Start MySQL server if it's not running.
+        
+    -   Access MySQL shell:
+        
+        bashCopy code
+        
+        `mysql -u root -p` 
+        
+    -   Create a MySQL database named `blogpost`:
+        
+        sqlCopy code
+        
+        `CREATE DATABASE IF NOT EXISTS blogpost;` 
+        
+    -   Create tables by running the SQL queries provided in `index.js`.
+        
     -   Update the database configuration in the source code if necessary (`host`, `user`, `password`).
+        
 
 ## Configuration
 
@@ -47,6 +65,8 @@ You can configure the following settings in the `config.js` file:
     bashCopy code
     
     `node index.js` 
+    
+2.  Access the API endpoints using a REST client or integrate with your frontend application.
     
 
 ## API Endpoints
