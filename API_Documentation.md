@@ -20,7 +20,6 @@
 -   **Description:** Creates a new user account.
 -   **Request Body:**
     
-    jsonCopy code
     
     `{
       "email": "example@example.com",
@@ -29,7 +28,6 @@
     
 -   **Response:**
     
-    jsonCopy code
     
     `{
       "token": "<JWT token>"
@@ -43,7 +41,6 @@
 -   **Description:** Authenticates existing user.
 -   **Request Body:**
     
-    jsonCopy code
     
     `{
       "email": "example@example.com",
@@ -52,7 +49,6 @@
     
 -   **Response:**
     
-    jsonCopy code
     
     `{
       "token": "<JWT token>"
@@ -66,7 +62,6 @@
 -   **Description:** Creates a new blog post.
 -   **Request Body:**
     
-    jsonCopy code
     
     `{
       "title": "Title of the post",
@@ -75,7 +70,6 @@
     
 -   **Response:**
     
-    jsonCopy code
     
     `{
       "message": "Post created successfully"
@@ -89,7 +83,6 @@
 -   **Description:** Retrieves a specific blog post by its ID.
 -   **Response:**
     
-    jsonCopy code
     
     `{
       "post": {
@@ -107,7 +100,6 @@
 -   **Description:** Updates an existing blog post by its ID.
 -   **Request Body:**
     
-    jsonCopy code
     
     `{
       "title": "Updated title",
@@ -116,7 +108,6 @@
     
 -   **Response:**
     
-    jsonCopy code
     
     `{
       "message": "Post updated successfully"
@@ -130,7 +121,6 @@
 -   **Description:** Deletes a blog post by its ID.
 -   **Response:**
     
-    jsonCopy code
     
     `{
       "message": "Post deleted successfully"
