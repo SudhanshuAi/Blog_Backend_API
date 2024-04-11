@@ -1,31 +1,28 @@
-## API Documentation
 
-### Base URL
+`# API Documentation
 
-`http://localhost:3000` 
+## Base URL` 
 
-**Note:** Replace `localhost:3000` with the appropriate base URL if deployed elsewhere.
+http://localhost:3000
 
-### Authentication
 
--   Authentication for certain endpoints is done via JWT tokens.
--   Include the JWT token in the `Authorization` header as `Bearer <token>` for authenticated endpoints.
+## Authentication
+- Authentication for certain endpoints is done via JWT tokens.
+- Include the JWT token in the `Authorization` header as `Bearer <token>` for authenticated endpoints.
 
-### Endpoints
+## Endpoints
 
-#### User Signup
+### User Signup
+- **URL:** `/api/v1/signup`
+- **Method:** `POST`
+- **Description:** Creates a new user account.
+- **Request Body:**
+  ```json
+  {
+    "email": "example@example.com",
+    "password": "password123"
+  }`` 
 
--   **URL:** `/api/v1/signup`
--   **Method:** `POST`
--   **Description:** Creates a new user account.
--   **Request Body:**
-    
-    
-    `{
-      "email": "example@example.com",
-      "password": "password123"
-    }` 
-    
 -   **Response:**
     
     
@@ -34,7 +31,7 @@
     }` 
     
 
-#### User Signin
+### User Signin
 
 -   **URL:** `/api/v1/signin`
 -   **Method:** `POST`
@@ -55,7 +52,7 @@
     }` 
     
 
-#### Create Post
+### Create Post
 
 -   **URL:** `/api/v1/posts`
 -   **Method:** `POST`
@@ -76,7 +73,7 @@
     }` 
     
 
-#### Read Post
+### Read Post
 
 -   **URL:** `/api/v1/posts/:id`
 -   **Method:** `GET`
@@ -93,7 +90,7 @@
     }` 
     
 
-#### Update Post
+### Update Post
 
 -   **URL:** `/api/v1/posts/:id`
 -   **Method:** `PUT`
@@ -114,7 +111,7 @@
     }` 
     
 
-#### Delete Post
+### Delete Post
 
 -   **URL:** `/api/v1/posts/:id`
 -   **Method:** `DELETE`
