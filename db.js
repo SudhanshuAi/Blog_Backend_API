@@ -15,7 +15,7 @@ const db = mysql.createConnection({
     }
     console.log('Connected to MySQL server');
   
-    // Create database if it doesn't exist
+    // Create database
     db.query('CREATE DATABASE IF NOT EXISTS blogpost', (err, result) => {
       if (err) {
         console.error('Error creating database:', err);
@@ -23,14 +23,13 @@ const db = mysql.createConnection({
       }
       console.log('Database "blogpost" created or already exists');
   
-      // Select the blogpost database
       db.query('USE blogpost', (err, result) => {
         if (err) {
           console.error('Error selecting database:', err);
           return;
         }
   
-        // Create users table if it doesn't exist
+        // Create users table
         db.query(`CREATE TABLE IF NOT EXISTS users (
           id INT AUTO_INCREMENT PRIMARY KEY,
           email VARCHAR(255) NOT NULL UNIQUE,
@@ -42,7 +41,7 @@ const db = mysql.createConnection({
           }
           console.log('Table "users" created or already exists');
   
-          // Create posts table if it doesn't exist
+          // Create posts table
           db.query(`CREATE TABLE IF NOT EXISTS posts (
             id INT AUTO_INCREMENT PRIMARY KEY,
             title VARCHAR(255) NOT NULL,
