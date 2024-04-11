@@ -7,8 +7,6 @@ const router = express.Router();
 
 const authenticateToken = require('../middleware');
 
-
-// Use body-parser middleware
 router.use(bodyParser.json());
 router.use(bodyParser.urlencoded({ extended: true }));
 
@@ -18,9 +16,9 @@ router.use(bodyParser.urlencoded({ extended: true }));
 router.post('/', authenticateToken, async (req, res) => {
     try {
       const { title, description } = req.body;
-      const userEmail = req.user.email; // Assuming user email is unique
+      const userEmail = req.user.email;
   
-      // Retrieve user ID based on email
+      //user ID based on email
       const userIdQuery = 'SELECT id FROM users WHERE email = ?';
       db.query(userIdQuery, [userEmail], async (userIdErr, userIdResults) => {
         if (userIdErr || userIdResults.length === 0) {
@@ -44,7 +42,7 @@ router.post('/', authenticateToken, async (req, res) => {
   });
   
 
-// Read a specific post
+// Read post
 router.get('/:id', async (req, res) => {
     try {
       const postId = req.params.id;
