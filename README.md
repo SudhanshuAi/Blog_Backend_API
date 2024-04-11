@@ -52,6 +52,16 @@ You can configure the following settings in the `config.js` file:
 
 -   `JWT_SECRET`: Secret key used for JWT token generation and verification.
 
+## Testing
+
+To run tests, you need to have Mocha and Chai installed globally or as development dependencies in your project:
+
+`npm install --save-dev mocha chai` 
+
+Once installed, you can run the tests with the following command:
+
+`mocha test.js`
+
 ## Usage
 
 1.  Start the server:
