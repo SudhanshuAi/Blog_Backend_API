@@ -19,13 +19,9 @@ Before running this API, ensure you have the following installed:
 
 1.  Clone this repository:
     
-    bashCopy code
-    
     `git clone <repository-url>` 
     
 2.  Install dependencies:
-    
-    bashCopy code
     
     `npm install` 
     
@@ -37,13 +33,11 @@ Before running this API, ensure you have the following installed:
         
     -   Access MySQL shell:
         
-        bashCopy code
         
         `mysql -u root -p` 
         
     -   Create a MySQL database named `blogpost`:
         
-        sqlCopy code
         
         `CREATE DATABASE IF NOT EXISTS blogpost;` 
         
@@ -62,11 +56,8 @@ You can configure the following settings in the `config.js` file:
 
 1.  Start the server:
     
-    bashCopy code
     
     `node index.js` 
-    
-2.  Access the API endpoints using a REST client or integrate with your frontend application.
     
 
 ## API Endpoints
