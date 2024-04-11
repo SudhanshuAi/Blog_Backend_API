@@ -19,7 +19,7 @@ Before running this API, ensure you have the following installed:
 
 1.  Clone this repository:
     
-    `git clone <[repository-url](https://github.com/SudhanshuAi/Blog_Backend_API)>` 
+    `git clone https://github.com/SudhanshuAi/Blog_Backend_API` 
     
 2.  Install dependencies:
     
