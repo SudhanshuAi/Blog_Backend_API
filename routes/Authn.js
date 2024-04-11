@@ -1,16 +1,13 @@
 const express = require('express');
 const jwt = require('jsonwebtoken');
-const bodyParser = require('body-parser'); // Require body-parser
+const bodyParser = require('body-parser');
 const db = require('../db');
 
 const router = express.Router();
 
-// Use body-parser middleware
 router.use(bodyParser.json());
 router.use(bodyParser.urlencoded({ extended: true }));
 
-
-// JWT Secret
 const JWT_SECRET = '123456';
 
 // User signup
@@ -19,7 +16,7 @@ router.post('/signup', async (req, res) => {
     console.log('Request body:', req.body);
     const { email, password } = req.body;
 
-    // Email validation using regular expression
+    // Email format validation 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
     return res.status(400).json({ error: 'Invalid email format' });
@@ -41,7 +38,7 @@ router.post('/api/v1/signin', async (req, res) => {
   try {
     const { email, password } = req.body;
 
-    // Email validation using regular expression
+    // Email format validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
       return res.status(400).json({ error: 'Invalid email format' });
